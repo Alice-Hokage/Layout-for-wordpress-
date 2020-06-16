@@ -1,0 +1,55 @@
+@media ( max-width: 767px )
+  .top-nav
+    &_btn
+      display: block
+    &_menu
+      flex-direction: column
+      display: none
+      &__active
+        display: flex
+        margin-bottom: 0
+      li
+        line-height: 2
+        a
+          &::after
+            display: none
+  .left-sidebar
+    &_btn
+      display: block
+    &_menu
+      display: none
+      &__active
+        display: block
+    &_reviews
+      display: none
+  .copy
+    text-align: center
+    small
+      display: block
+      margin: 36px auto
+.footer
+  &-contacts
+    text-align: left
+
+@media ( min-width: 767px ) and (max-width: 991px)
+  .top-nav
+    &_btn
+      display: block
+    &_menu
+      display: none
+      justify-content: space-around
+      &__active
+        display: flex
+        margin-bottom: 0
+        
+      li
+        margin-right: 0
+  .left-sidebar
+    &_btn
+      display: block
+    &_menu
+      display: none
+      &__active
+        display: block
+    &_reviews
+      display: none
