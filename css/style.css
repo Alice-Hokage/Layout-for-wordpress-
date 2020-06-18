@@ -89,6 +89,17 @@ body {
   padding: 15px;
   margin-bottom: 4rem;
   position: relative; }
+  .to-both {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(135deg, #edeef0 50%, #575757 50%);
+    transform: rotate(45deg);
+    position: fixed;
+    right: 40px;
+    top: 70px;
+    display: block;
+    transition: all 0.5s;
+  }
   .top-nav_btn {
     display: none;
     width: 30px;
@@ -201,6 +212,17 @@ body {
   color: #666666;
   padding: 60px 0;
   margin-top: 60px; }
+  .to-top {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(135deg, #edeef0 50%, transparent 50%);
+    transform: rotate(45deg);
+    position: fixed;
+    right: 40px;
+    bottom: 70px;
+    display: none;
+    transition: all 0.5s;
+  }
   .footer-policy-link {
     font-size: 12px; }
   .footer p {
@@ -292,6 +314,7 @@ body {
     text-align: center; }
 
 .modal {
+  display : none;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   left: 0;
