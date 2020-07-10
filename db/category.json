@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Instagram",
+    "products": "instagram.json"
+  },
+  {
+    "name": "Tik-tok",
+    "products": "tik-tok.json"
+  },
+  {
+    "name": "Twitter",
+    "products": "twitter.json"
+  },
+  {
+    "name": "Vkontakte",
+    "products": "vkontakte.json"
+  },
+  {
+    "name": "Facebook",
+    "products": "facebook.json"
+  }
+]

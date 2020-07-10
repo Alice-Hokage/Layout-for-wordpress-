@@ -20,7 +20,7 @@
   <div class="top-nav">
     <div class="row justify-content-between align-items-center">
       <div class="col-xl col-lg-4">
-        <div class="logo"><a href="index.html">Push&push</a></div>
+        <div class="logo"><a href="/index.html">Push&push</a></div>
       </div>
       <!-- /.col-md -->
       <div class="col-xl col-lg-8">
@@ -28,9 +28,9 @@
           <i class="icon-menu"></i>
         </button>
         <ul class="top-nav_menu">
-          <li><a href="service.html">Наши услуги</a></li>
-          <li><a href="#footer">Контакты</a></li>
-          <li><a href="about.html">О нас</a></li>
+          <li><a href="/service.html">Наши услуги</a></li>
+          <li><a href="/contacts.html">Контакты</a></li>
+          <li><a href="/about.html">О нас</a></li>
         </ul>
       </div>
       <!-- /.col-md -->
@@ -46,19 +46,14 @@
           <span>Направления</span>
         </div>
         <ul class="left-sidebar_menu">
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Vkontakte</a></li>
-          <li><a href="#">Tik-tok</a></li>
-          <li><a href="#">Facebook</a></li>
         </ul>
 
         <div class="left-sidebar_reviews">
-          <div class="row"><img src="img/avatar.png" alt="Avatar"><div class="reviews-info justify-content-end"><span>Alice</span><strong>Bloger</strong></div></div>
+          <div class="row"><img src="/img/avatar.png" alt="Avatar"><div class="reviews-info justify-content-end"><span>Alice</span><strong>Bloger</strong></div></div>
           <i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</i>
         </div>
         <div class="left-sidebar_reviews">
-          <div class="row"><img src="img/avatar.png" alt="Avatar"><div class="reviews-info justify-content-end"><span>Alice</span><strong>Bloger</strong></div></div>
+          <div class="row"><img src="/img/avatar.png" alt="Avatar"><div class="reviews-info justify-content-end"><span>Alice</span><strong>Bloger</strong></div></div>
           <i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</i>
         </div>
       </div>
@@ -66,7 +61,7 @@
     <!-- /.col-md-4 -->
     <div class="col-lg-8">
       <div class="content">
-        <h2>Категория</h2>
+        <h2 class="category">Категория</h2>
           <div class="row">
             <div class="col-md-6">
               <div class="object-card">
@@ -77,7 +72,7 @@
                      In perspiciatis laborum alias nulla quae ipsum aspernatur dolore ipsam, culpa inventore.
                    Itaque, illum.</p>
                 <p class="object-card_price">Free</p>
-                <a href="" class="btn object-card_btn btn-primary">Buy</a>
+                <a href="#" class="btn object-card_btn btn-primary">Buy</a>
               </div>
             </div>
             <div class="col-md-6">
@@ -89,7 +84,7 @@
                      In perspiciatis laborum alias nulla quae ipsum aspernatur dolore ipsam, culpa inventore.
                    Itaque, illum.</p>
                 <p class="object-card_price">Free</p>
-                <a href="" class="btn object-card_btn btn-primary">Buy</a>
+                <a href="#" class="btn object-card_btn btn-primary">Buy</a>
               </div>
             </div>
             <div class="col-md-6">
@@ -101,7 +96,7 @@
                      In perspiciatis laborum alias nulla quae ipsum aspernatur dolore ipsam, culpa inventore.
                    Itaque, illum.</p>
                 <p class="object-card_price">Free</p>
-                <a href="" class="btn object-card_btn btn-primary">Buy</a>
+                <a href="#" class="btn object-card_btn btn-primary">Buy</a>
               </div>
             </div>
             <div class="col-md-6">
@@ -113,7 +108,7 @@
                      In perspiciatis laborum alias nulla quae ipsum aspernatur dolore ipsam, culpa inventore.
                    Itaque, illum.</p>
                 <p class="object-card_price">Free</p>
-                <a href="" class="btn object-card_btn btn-primary">Buy</a>
+                <a href="#" class="btn object-card_btn btn-primary">Buy</a>
               </div>
             </div>
           </div>
@@ -140,18 +135,18 @@
     </div>
     <div class="col-md-2 col-6">
       <ul class="footer_menu">
-        <li><a href="service.html">Наши услуги</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-        <li><a href="about.html">О нас</a></li>
+        <li><a href="/service.html">Наши услуги</a></li>
+        <li><a href="/contacts.html">Контакты</a></li>
+        <li><a href="/about.html">О нас</a></li>
       </ul>
     </div>
     <div class="col-md col-6">
       <ul class="footer_menu">
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Vkontakte</a></li>
-        <li><a href="#">Tik-tok</a></li>
-        <li><a href="#">Facebook</a></li>
+        <li><a href="/category.html">Twitter</a></li>
+        <li><a href="/category.html">Instagram</a></li>
+        <li><a href="/category.html">Vkontakte</a></li>
+        <li><a href="/category.html">Tik-tok</a></li>
+        <li><a href="/category.html">Facebook</a></li>
       </ul>
     </div>
     <div class="col-md 3">
@@ -171,10 +166,28 @@
   </div>
   </div>
   <!-- /.container -->
+  <a href="#top" class="to-top"></a>
 </footer>
+<div class="modal hide">
+  <div class="modal-content">
+    <div class="close">&times;</div>
+    <h4>Заполните поля</h4>
+    <p>Мы свяжемся с вами в ближайшее время</p>
+    <div class="modal-form">
+      <form action="">
+        <input type="text" placeholder="Ваше имя">
+        <input type="text" placeholder="Ваш телефон">
+        <button type="submit" class="btn btn-primary modal-form_btn">Отправить заявку</button>
+        <small>
+          Нажимая кнопку, даю согласие на <a href="#">обработку персональных данных</a>
+        </small>
+      </form>
+    </div>
+  </div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>
