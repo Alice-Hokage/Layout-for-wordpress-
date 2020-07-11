@@ -8,7 +8,10 @@ const navBtn = document.querySelector('.top-nav_btn'),
       content = document.querySelector('.content'),
       modal = document.querySelector('.modal'),
       category = document.querySelector('.category'),
-      titlePage = document.querySelector('.title-page');
+      titlePage = document.querySelector('.title-page'),
+      card = document.querySelector('.card'),
+      itemListPage = document.querySelector('.item-list'),
+      logo = document.querySelector('.logo');
 
 const getData = async function(url) {
   const response = await fetch(url);
@@ -59,24 +62,69 @@ const closeModal = (event) => {
       modal.classList.add('hide');
   }
 }); */
-const createCategoryList = (category) => {
+const createCategoryList = category => {
   const {
     name,
     products
   } = category;
   const list = `
-          <li><a href="#">${name}</a></li>
+          <li class="list" data-products ='${products}' data-name='${[name]}'><a>${name}</a></li>
   `;
 sideMenu.insertAdjacentHTML('beforeend', list);
 };
 
-const createItemList = (list) {
+const createItemList = (item) => {
+  const { id, title, description, price } = item;
 
+const listItem = `
+                <div class="col-md-6">
+                  <div class="object-card">
+                    <h2 class="object-card_title">${title}</h2>
+                    <p> ${description}</p>
+                    <p class="object-card_price">${price} ₽</p>
+                    <a class="btn object-card_btn btn-primary" id="${id}">Buy</a>
+                  </div>
+                </div>
+              
+`;
+itemListPage.insertAdjacentHTML('beforeend', listItem);
+};
+const openCatalogItem = event => {
+  const target = event.target;
+  const itemList = target.closest('.list');
+
+  const itemData = itemList.dataset.name.split(',');
+  const [name] = itemData;
+
+  itemListPage.textContent = '';
+  if (itemList) {
+      content.classList.add('hide');
+      itemListPage.classList.remove('hide');
+      titlePage.textContent = name;
+
+      getData(`./db/${itemList.dataset.products}`).then(function(data) {
+        data.forEach(createItemList);
+  });
+}
+};
+const returnMain = () => {
+  itemListPage.classList.add('hide');
+  content.classList.remove('hide');
+};
+const createMenu = item => {
+  const { title } = item;
+  const listMenu = `
+  <li><a>${title}</a></li>
+  `;
+  navMenu.insertAdjacentHTML('beforeend', listMenu);
 };
 function init() {
 
   getData('./db/category.json').then(function(data) {
     data.forEach(createCategoryList);
+  });
+  getData('./db/menu.json').then(function(data) {
+    data.forEach(createMenu);
   });
 
   //media event
@@ -90,9 +138,12 @@ function init() {
   window.addEventListener('scroll', smoothScroll);
   toTop.addEventListener('click', scrollToTop);
 
-  //open and close madal window
-  content.addEventListener('click', openModal);
+  //open and close modal window
+  itemListPage.addEventListener('click', openModal);
   modal.addEventListener('click', closeModal);
 
+  sideMenu.addEventListener('click', openCatalogItem);
+
+  logo.addEventListener('click', returnMain);
 };
 init();

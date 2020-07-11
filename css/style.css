@@ -104,7 +104,8 @@ body {
       cursor: pointer; }
   .top-nav .logo {
     font-size: 1.5em;
-    font-weight: 700; }
+    font-weight: 700;
+    cursor: pointer;}
     .top-nav .logo a {
       text-decoration: none;
       color: #131313; }
@@ -114,9 +115,11 @@ body {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+  }
     .top-nav_menu li {
-      margin-right: 45px; }
+      margin-right: 45px;
+      cursor: pointer; }
       .top-nav_menu li a {
         text-transform: uppercase;
         text-decoration: none;
@@ -156,7 +159,8 @@ body {
 .left-sidebar_menu {
   background-color: #ffffff;
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  cursor: default;}
   .left-sidebar_menu li {
     transition: all 0.2s; }
     .left-sidebar_menu li:first-child a {
@@ -191,9 +195,9 @@ body {
       font-size: 1.25em; }
   .left-sidebar_reviews .row {
     margin-bottom: 15px; }
-
-.content h2 {
-  font-size: 24px; }
+.title-page h2 {
+  font-size: 24px;
+}
 .content p {
   line-height: 30px; }
 
